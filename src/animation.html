@@ -7,6 +7,7 @@
     <title>Frontend-baserad webbutveckling</title>
     <link rel="stylesheet" href="css/main.scss">
     <script src="js/main.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/e49202e377.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -15,7 +16,7 @@
     </header>
     <div class="menu-container">
         <div class="menu">
-            <h1>Moment 3</h1>
+            <h1>Moment 4</h1>
 
             <!--Menyknapp för att öppna mobilmeny-->
             <button class="menu-btn open" id="open-menu">
@@ -36,19 +37,23 @@
                     </span>
                 </button>
 
+                <!--Adderar en undermeny-->
                 <ul>
-                    <li class="selected-menu"><a href="index.html">Hem</a></li>
+                    <li class="menu-option"><a href="index.html">Hem</a></li>
                     <li class="menu-option"><a href="sass.html">SASS</a></li>
-                    <li class="menu-option"><a href="animation.html">Animering</a></li>
+                    <li class="menu-option"><a href="animation.html">Animering <strong
+                                class="fas fa-chevron-down arrow"></strong></a>
+                        <ul class="sub-menu" id="animation">
+                            <li><a href="#">Animering 1</a></li>
+                            <li><a href="#">Animering 2</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
         </div>
     </div>
     <main>
-        <p class="intro">Välkommen till min webbplats för moment 3 i Frontend-baserad webbutveckling!
-            Under "SASS" kan du läsa lite om sevärdheter i Bern där jag bor samt
-            utvärdering av mitt arbete med SASS.
-        </p>
+
     </main>
     <footer>
         <p>Frida Jansson</p>

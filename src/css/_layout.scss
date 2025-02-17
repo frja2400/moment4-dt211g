@@ -65,7 +65,9 @@ header {
 .menu {
     display: flex;
     justify-content: space-between;
-    width: 500px;
+    width: 700px;
+    margin-left: 20px;
+    margin-right: 20px;
 
     h1 {
         color: $text-color;
@@ -110,6 +112,10 @@ header {
     left: 50%;
     transform: translateX(-50%);
     font-size: $sub-menu-font-size;
+}
+
+#animation {
+    width: 100px;
 }
 
 .menu-container .menu .menu-option:hover .sub-menu {
