@@ -112,6 +112,7 @@ header {
     left: 50%;
     transform: translateX(-50%);
     font-size: $sub-menu-font-size;
+    z-index: 2;
 }
 
 #animation {
@@ -141,4 +142,8 @@ header {
 
 .firstImage {
     margin-bottom: 20px;
+}
+
+.animering {
+    text-align: center;
 }
