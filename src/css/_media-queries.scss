@@ -80,13 +80,31 @@
     .menu-container .menu .menu-option .sub-menu,
     .menu-container .menu .menu-option:hover .sub-menu {
         display: block;
-        background-color: transparent;
+        background-color: transparent; 
         padding: 0;
-        margin-top: -40px;
+        margin-top: -10px;
+        margin-left: 40px;
+        position: relative;
+        width: 100%;
+    }
+
+    #animation {
+        margin-left: 50px;
+        width: 150px;
     }
 
     .menu-container .menu .menu-option .sub-menu li {
-        margin-left: 30px;
+        text-align: left;
+    }
+
+    .menu nav li#sass.menu-option > a:hover {
+        border-bottom: none;
+        cursor: default;
+    }
+
+    .menu nav li#animations.menu-option > a:hover {
+        border-bottom: none;
+        cursor: default;
     }
 
     main, .menu {
