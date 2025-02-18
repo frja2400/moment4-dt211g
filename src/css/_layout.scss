@@ -99,10 +99,10 @@ header {
 
 .menu-container .menu .menu-option {
     position: relative;
+    z-index: 1;
 }
 
 .menu-container .menu .menu-option .sub-menu {
-    display: none;
     flex-direction: column;
     align-items: center;
     position: absolute;
@@ -112,15 +112,26 @@ header {
     left: 50%;
     transform: translateX(-50%);
     font-size: $sub-menu-font-size;
-    z-index: 2;
+    transition: 0.7s;
+    opacity: 0;
+    visibility: hidden;
+    margin-top: -30px;
+    z-index: -1;
 }
 
 #animation {
     width: 100px;
 }
 
-.menu-container .menu .menu-option:hover .sub-menu {
-    display: flex;
+.menu-container .menu .menu-option:hover > .sub-menu {
+    opacity: 1;
+    visibility: visible;
+    margin-top: 0;
+}
+
+.menu nav li#animations.menu-option > a:hover,
+.menu nav li#sass.menu-option > a:hover {
+    border-bottom: none;
 }
 
 .menu nav li.selected-menu a,
