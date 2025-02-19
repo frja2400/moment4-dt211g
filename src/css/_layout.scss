@@ -98,32 +98,33 @@ header {
 }
 
 .menu-container .menu .menu-option {
-    position: relative;
+    position: relative; /*Referenspunkt till sub-menu*/
     z-index: 1;
 }
 
 .menu-container .menu .menu-option .sub-menu {
     flex-direction: column;
     align-items: center;
-    position: absolute;
+    position: absolute; /*Så att jag kan placera min sub-menu där jag vill ha den*/
     background-color: $tertiary-color;
     padding: 30px 10px 20px 10px;
     top: 100%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%); /*Centrerar undermenyn.*/
     font-size: $sub-menu-font-size;
-    transition: 0.7s;
-    opacity: 0;
-    visibility: hidden;
-    margin-top: -30px;
-    z-index: -1;
+    transition: 0.7s; /*Adderar tid för transition*/
+    opacity: 0; /*Börjar helt transparent*/
+    visibility: hidden; /*Sub-menu är gömd*/
+    margin-top: -30px; /*Skapar en neagtiv margin för effekt att den menyn kommer uppifrån och ned*/
+    z-index: -1; /*Ser till så att den hamnar bakom huvudmenyn*/
 }
 
 #animation {
     width: 100px;
 }
 
-.menu-container .menu .menu-option:hover > .sub-menu {
+/*När du hovrar över så blir menyn gradvid synlig och fälls ut*/
+.menu-container .menu .menu-option:hover .sub-menu {
     opacity: 1;
     visibility: visible;
     margin-top: 0;
@@ -157,4 +158,8 @@ header {
 
 .animering {
     text-align: center;
+}
+
+#animering1, #animering2, #animering3 {
+    background-color: transparent;
 }

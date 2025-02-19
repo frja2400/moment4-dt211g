@@ -74,19 +74,26 @@
         border-bottom: 2px solid $text-color;
     }
 
-    .menu-container, footer {
+    .menu-container,
+    footer {
         height: 50px;
     }
 
+    /*Tar bort hover-effekt på undermenyn i mobilvy*/
     .menu-container .menu .menu-option .sub-menu,
     .menu-container .menu .menu-option:hover .sub-menu {
         display: block;
-        background-color: transparent; 
+        background-color: transparent;
         padding: 0;
         margin-top: -10px;
         margin-left: 40px;
         width: 100%;
         transition: none;
+        opacity: 1;
+        visibility: visible;
+        margin-top: 0;
+        z-index: auto;
+        position: relative;
     }
 
     .menu-container .menu .menu-option:hover .sub-menu {
@@ -102,25 +109,28 @@
         text-align: left;
     }
 
-    .menu nav li#sass.menu-option > a:hover {
+    .menu nav li#sass.menu-option>a:hover {
         border-bottom: none;
         cursor: default;
     }
 
-    .menu nav li#animations.menu-option > a:hover {
+    .menu nav li#animations.menu-option>a:hover {
         border-bottom: none;
         cursor: default;
     }
 
-    main, .menu {
+    main,
+    .menu {
         width: 90%;
     }
 
-    .firstImage, .secondImage {
+    .firstImage,
+    .secondImage {
         width: 100%;
     }
 
-    h1 {
+    h1,
+    #open-menu {
         margin-top: auto;
         margin-bottom: auto;
     }
@@ -132,7 +142,10 @@
 }
 
 @include respond-to(dark-mode) {
-    main p, h2, h3 {
+
+    main p,
+    h2,
+    h3 {
         color: $primary-color;
     }
 
