@@ -27,3 +27,49 @@
         transform: scale(2.5) translateX(-50%);
     }
 }
+
+
+.btnContainer {
+    text-align: center;
+}
+
+button {
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #C50000;
+    color: #F1F1F1;
+    cursor: pointer;
+}
+
+.loadContainer {
+    height: 25px;
+    width: 100%;
+    background-color: lightgrey;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.loading {
+    height: 25px;
+    width: 0%;
+    background-color: purple;
+    margin-bottom: 30px;
+    transition: width 4s linear;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.circle {
+    height: 50px;
+    width: 50px;
+    background-color: purple;
+    border-radius: 50px;
+    animation: moveCircle 4s infinite linear alternate-reverse;
+}
+
+@keyframes moveCircle {
+    from {transform: translate(450px);}
+    to {transform: translate(0px);}
+}

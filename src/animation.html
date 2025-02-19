@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frontend-baserad webbutveckling</title>
     <link rel="stylesheet" href="css/main.scss">
-    <script src="js/main.js" type="module"></script>
+    <script src="js/main.js" type="module" defer></script>
     <script src="https://kit.fontawesome.com/e49202e377.js" crossorigin="anonymous"></script>
 </head>
 
@@ -66,8 +66,39 @@
             <div class="star"></div>
         </div>
         <h3 id="animering2">Animering 2</h3>
+        <p class="animering">En laddningsbar vid klick av knapp, skapad med transition och JavaScript.</p>
+        <div class="loadContainer">
+            <div class="loading"></div>
+        </div>
+        <div class="btnContainer">
+            <button id="loadButton" onclick="expandLoading()">LADDA NER</button>
+        </div>
+        <script>
+            function expandLoading() {
+                const loadingEl = document.querySelector('.loading');
+
+                loadButton.disabled = true;
+                loadingEl.style.width = '100%';
+
+                setTimeout(() => {
+                    loadingEl.textContent = 'Laddar...';
+                    loadingEl.style.color = '#FFFFFF';
+                    loadingEl.style.paddingLeft = '10px';
+                    loadingEl.style.lineHeight = '25px';
+                }, 500);
+
+                setTimeout(() => {
+                    loadingEl.textContent = 'Klar!';
+                    loadingEl.style.textAlign = 'right';
+                    loadingEl.style.paddingRight = '10px';
+                }, 4300);
+
+            }
+        </script>
         <h3 id="animering3">Animering 3</h3>
-        <p class="animering">Animering 3 är undermenyn under "Animering", skapad med transition och hover.</p>
+        <p class="animering">Animering 3 är en cirkel som rör sig med hjälp av animation, keyframes och transform.
+            Undermenyn till "Animering" är också en animering, skapad med transition och hover.</p>
+        <div class="circle"></div>
     </main>
     <footer>
         <p>Frida Jansson</p>
