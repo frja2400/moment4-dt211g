@@ -73,33 +73,6 @@
         <div class="btnContainer">
             <button id="loadButton" onclick="expandLoading()">LADDA NER</button>
         </div>
-        <script>
-            function expandLoading() {
-                const loadingEl = document.querySelector('.loading');
-
-                //Efter ett tryck ska man inte kunna klicka igen.
-                loadButton.disabled = true;
-
-                //Vid klick ska den täcka hela föräldraelementet. 
-                loadingEl.style.width = '100%';
-
-                //Adderar text efter 500ms.
-                setTimeout(() => {
-                    loadingEl.textContent = 'Laddar...';
-                    loadingEl.style.color = '#FFFFFF';
-                    loadingEl.style.paddingLeft = '10px';
-                    loadingEl.style.lineHeight = '25px';
-                }, 500);
-
-                //Ändrar texten när laddningstiden(transitiontiden) är klar.
-                setTimeout(() => {
-                    loadingEl.textContent = 'Klar!';
-                    loadingEl.style.textAlign = 'right';
-                    loadingEl.style.paddingRight = '10px';
-                }, 4100);
-
-            }
-        </script>
         <h2 id="animering3">Animering 3</h2>
         <p class="animering">Animering 3 är en cirkel som rör sig med hjälp av animation och keyframes.</p>
         <p class="animering">Undermenyn till "Animering" är också en animering i desktopvy, skapad med transition och hover.</p>

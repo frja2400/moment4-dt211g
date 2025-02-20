@@ -42,3 +42,33 @@
             }
         });
     });
+
+    //Funktion för animation vid knapptryck.
+    function expandLoading() {
+        const loadingEl = document.querySelector('.loading');
+
+        //Efter ett tryck ska man inte kunna klicka igen.
+        loadButton.disabled = true;
+
+        //Vid klick ska den täcka hela föräldraelementet. 
+        loadingEl.style.width = '100%';
+
+        //Adderar text efter 500ms.
+        setTimeout(() => {
+            loadingEl.textContent = 'Laddar...';
+            loadingEl.style.color = '#FFFFFF';
+            loadingEl.style.paddingLeft = '10px';
+            loadingEl.style.lineHeight = '25px';
+        }, 500);
+
+        //Ändrar texten när laddningstiden(transitiontiden) är klar.
+        setTimeout(() => {
+            loadingEl.textContent = 'Klar!';
+            loadingEl.style.textAlign = 'right';
+            loadingEl.style.paddingRight = '10px';
+        }, 4100);
+
+    }
+
+    //Behövde göra den globalt tillgänglig pga button onlick.
+    window.expandLoading = expandLoading;
