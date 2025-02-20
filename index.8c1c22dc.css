@@ -1,0 +1,383 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap";
+main, footer, header, .menu-container {
+  width: 100%;
+}
+
+body {
+  background-color: #fffdef;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0 auto;
+  font-family: Roboto, Helvetica, sans-serif;
+  display: flex;
+  overflow-x: hidden;
+}
+
+main {
+  flex: 1;
+  max-width: 500px;
+  padding: 2%;
+}
+
+main p {
+  line-height: 1.7em;
+}
+
+main h3 {
+  text-align: center;
+  margin-top: 40px;
+}
+
+main h2 {
+  text-align: center;
+  color: #2b0b0b;
+  background-color: #ebb0b080;
+}
+
+footer {
+  background-color: brown;
+}
+
+footer p {
+  text-align: center;
+  color: #f1f1f1;
+}
+
+header {
+  color: #f1f1f1;
+  background-color: #c50000;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 15px;
+  display: flex;
+}
+
+header img {
+  margin-bottom: -5px;
+}
+
+.menu-container {
+  background-color: brown;
+  justify-content: center;
+  display: flex;
+}
+
+.menu {
+  justify-content: space-between;
+  width: 700px;
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+}
+
+.menu h1 {
+  color: #f1f1f1;
+  letter-spacing: 1px;
+  font-size: 1.4em;
+}
+
+.menu nav {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.menu ul {
+  gap: 40px;
+  list-style-type: none;
+  display: flex;
+}
+
+.menu nav ul li a {
+  color: #f1f1f1;
+  text-decoration: none;
+}
+
+.menu li {
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.menu-container .menu .menu-option {
+  z-index: 1;
+  position: relative;
+}
+
+.menu-container .menu .menu-option .sub-menu {
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+  background-color: brown;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -30px;
+  padding: 30px 10px 20px;
+  font-size: .8em;
+  transition: all .7s;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#animation {
+  width: 100px;
+}
+
+.menu-container .menu .menu-option:hover .sub-menu {
+  opacity: 1;
+  visibility: visible;
+  margin-top: 0;
+}
+
+.menu nav li#animations.menu-option > a:hover, .menu nav li#sass.menu-option > a:hover {
+  border-bottom: none;
+}
+
+.menu nav li.selected-menu a, .menu nav li.menu-option a:hover {
+  border-bottom: 2px solid #f1f1f1;
+}
+
+.menu-btn {
+  display: none;
+}
+
+.intro, #utvardering {
+  margin-top: 50px;
+}
+
+.arrow {
+  margin-left: 5px;
+}
+
+.firstImage {
+  margin-bottom: 20px;
+}
+
+.animering {
+  text-align: center;
+}
+
+#animering1, #animering2, #animering3 {
+  background-color: #0000;
+}
+
+@media (width <= 655px) {
+  nav {
+    z-index: 2;
+    background-color: brown;
+    width: 190px;
+    height: 100vh;
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    box-shadow: 0 0 10px #000000b5;
+  }
+
+  .menu-btn {
+    cursor: pointer;
+    background: none;
+    border: none;
+    align-items: center;
+    padding: 8px 15px;
+    display: flex;
+  }
+
+  #close-menu {
+    margin: 20px 20px 20px 50px;
+  }
+
+  .bars {
+    background-color: #f1f1f1;
+    width: 28px;
+    height: 3px;
+    margin: 5px 0;
+    display: block;
+  }
+
+  .cross1 {
+    width: 25px;
+    position: relative;
+    top: 5px;
+    transform: rotate(45deg);
+  }
+
+  .cross2 {
+    width: 25px;
+    position: relative;
+    top: -3px;
+    transform: rotate(135deg);
+  }
+
+  .menu-icon {
+    margin-left: 20px;
+  }
+
+  .menu ul {
+    display: block;
+  }
+
+  .menu ul li {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: 35px;
+  }
+
+  .menu nav li.selected-menu a {
+    border-bottom: none;
+  }
+
+  .menu nav li.selected-menu a:hover {
+    border-bottom: 2px solid #f1f1f1;
+  }
+
+  .menu-container, footer {
+    height: 50px;
+  }
+
+  .menu-container .menu .menu-option .sub-menu, .menu-container .menu .menu-option:hover .sub-menu {
+    opacity: 1;
+    visibility: visible;
+    z-index: auto;
+    background-color: #0000;
+    width: 100%;
+    margin-top: 0;
+    margin-left: 40px;
+    padding: 0;
+    transition: none;
+    display: block;
+    position: relative;
+  }
+
+  .menu-container .menu .menu-option:hover .sub-menu {
+    position: relative;
+  }
+
+  #animation {
+    width: 150px;
+    margin-left: 50px;
+  }
+
+  .menu-container .menu .menu-option .sub-menu li {
+    text-align: left;
+  }
+
+  .menu nav li#sass.menu-option > a:hover, .menu nav li#animations.menu-option > a:hover {
+    cursor: default;
+    border-bottom: none;
+  }
+
+  main, .menu {
+    width: 90%;
+  }
+
+  .firstImage, .secondImage {
+    width: 100%;
+  }
+
+  h1, #open-menu {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  h3 {
+    margin-top: 30px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  main p, h2, h3 {
+    color: #fffdef;
+  }
+
+  body {
+    background-color: #c44545;
+  }
+
+  h2 {
+    background-color: brown;
+  }
+}
+
+.container {
+  z-index: 0;
+  position: relative;
+}
+
+.star {
+  background: radial-gradient(circle, #fff 0%, #fff0 70%);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: 2s infinite alternate shine;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+}
+
+@keyframes shine {
+  0% {
+    opacity: .2;
+    transform: scale(1)translateX(-50%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(2.5)translateX(-50%);
+  }
+}
+
+.btnContainer {
+  text-align: center;
+}
+
+button {
+  color: #f1f1f1;
+  cursor: pointer;
+  background-color: #c50000;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.loadContainer {
+  background-color: #d3d3d3;
+  border-radius: 5px;
+  width: 100%;
+  height: 25px;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.loading {
+  box-sizing: border-box;
+  background-color: purple;
+  border-radius: 5px;
+  width: 0%;
+  height: 25px;
+  margin-bottom: 30px;
+  transition: width 4s linear;
+}
+
+.circle {
+  background-color: purple;
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+  animation: 4s linear infinite alternate-reverse moveCircle;
+}
+
+@keyframes moveCircle {
+  from {
+    margin-left: calc(100% - 50px);
+  }
+
+  to {
+    margin-left: 0;
+  }
+}
+/*# sourceMappingURL=index.8c1c22dc.css.map */
